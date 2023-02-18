@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+    <mapped-superclass class="com.bcefit.projet.domain.watch.WatchContentEntity">
+        <attributes>
+            <id name="uid" />
+            <basic name="id_user"/>
+            <basic name="id_movie"/>
+            <basic name="viewing_place"  />
+            <basic name="viewing_mood" />
+            <basic name="viewing_rate" />
+        </attributes>
+    </mapped-superclass>
+    <entity class="com.bcefit.projet.domain.watch.WatchMovieEntity" access="FIELD">
+        <table name="WATCH_MOVIE" />
+        <attributes>
+            <id name="uid"  />
+            <basic name="id_movie"/>
+            <basic name="id_collection"/>
+        </attributes>
+    </entity>
+
+
+</entity-mappings>
