@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+    <mapped-superclass class="com.bcefit.projet.domain.WishContentEntity">
+        <attributes>
+            <id name="uid" />
+            <basic name="idUser"/>
+        </attributes>
+    </mapped-superclass>
+    <entity class="com.bcefit.projet.domain.WishMovieEntity" access="FIELD">
+        <table name="WATCH_MOVIE" />
+        <attributes>
+            <id name="uid"  />
+            <basic name="idMovie"/>
+            <basic name="idCollection"/>
+        </attributes>
+    </entity>
+    <entity class="com.bcefit.projet.domain.WishEpisodeEntity" access="FIELD">
+        <table name="WISH_EPISODE" />
+        <attributes>
+            <id name="uid"  />
+            <basic name="idEpisode"/>
+            <basic name="idSeason"/>
+            <basic name="idTv"/>
+        </attributes>
+    </entity>
+
+</entity-mappings>

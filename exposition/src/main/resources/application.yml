@@ -14,9 +14,8 @@ spring:
       format-sql: true
 
     mapping-resources:
-      - META-INF/wishmovie.orm.hbm.xml
-      - META-INF/wishepisode.orm.hbm.xml
-      - META-INF/watchmovie.orm.hbm.xml
+      - META-INF/wish.orm.hbm.xml
+      - META-INF/watch.orm.hbm.xml
     show-sql: true
 
   datasource:

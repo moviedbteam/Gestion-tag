@@ -1,2 +1,2 @@
-insert into WISH_MOVIE(uid, id_user,id_movie,id_collection) values ('aa','324827','55','');
-insert into WISH_EPISODE(uid,id_user,id_episode,id_serie,id_tv) values ('1','324827','55','12','5');
+insert into WISH_MOVIE(uid, idUser,idMovie,idCollection) values ('aa','324827','55','');
+insert into WISH_EPISODE(uid,idUser,idEpisode,idSeason,idTv) values ('1','324827','55','12','5');
