@@ -26,3 +26,23 @@ create table WATCH_MOVIE
     viewingRate INT,
     PRIMARY KEY (uid)
 );
+create table GENRE_MOVIE
+(
+    id INTEGER NOT NULL,
+    name VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+create table GENRE_TV
+(
+    id INTEGER NOT NULL,
+    name VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+create table STREAMING_SUBSCRIPTION
+(
+    id INTEGER NOT NULL,
+    name VARCHAR(50),
+    PRIMARY KEY (id)
+);

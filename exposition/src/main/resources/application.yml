@@ -16,6 +16,9 @@ spring:
     mapping-resources:
       - META-INF/wish.orm.hbm.xml
       - META-INF/watch.orm.hbm.xml
+      - META-INF/genreMovie.orm.hbm.xml
+      - META-INF/genreTv.orm.hbm.xml
+      - META-INF/streamingSubscription.orm.hbm.xml
     show-sql: true
 
   datasource:
