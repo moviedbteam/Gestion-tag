@@ -1,13 +1,14 @@
-package com.bcefit.projet.domain.user;
+package com.bcefit.projet.exposition.user;
 
-public class GenreTvEntity {
+public class GenreTvDto {
+
     private int id;
     private String name;
 
-    public GenreTvEntity() {
+    public GenreTvDto() {
     }
 
-    public GenreTvEntity(int id, String name) {
+    public GenreTvDto(int id, String name) {
         this.id = id;
         this.name = name;
     }

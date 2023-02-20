@@ -26,7 +26,7 @@ public class GenreMovieController {
         return new ResponseEntity<>("OK", HttpStatus.OK);
     }
 
-    @GetMapping(value = "/genremovie/genres")
+    @GetMapping(value = "/genre/movie")
     public ResponseEntity<List<GenreMovieDto>> getAllGenreMovieAPI(){
         // 1- Récuperer les liste des "genre Movie" entities depuis l'application service
         List<GenreMovieEntity> genreMovieEntityList = genreMovieApplicationServicePort.getAllGenreMovie();

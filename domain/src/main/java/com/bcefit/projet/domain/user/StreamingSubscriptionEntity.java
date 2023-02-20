@@ -5,6 +5,8 @@ public class StreamingSubscriptionEntity {
     private int id;
     private String name;
 
+    public StreamingSubscriptionEntity() {
+    }
 
     public StreamingSubscriptionEntity(int id, String name) {
         this.id = id;
