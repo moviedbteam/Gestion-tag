@@ -4,7 +4,7 @@
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
 
-    <mapped-superclass class="com.bcefit.projet.domain.WishContentEntity">
+    <mapped-superclass class="com.bcefit.projet.domain.wish.WishContentEntity">
         <attributes>
             <id name="uid" />
             <basic name="idUser">
@@ -12,7 +12,7 @@
             </basic>
         </attributes>
     </mapped-superclass>
-    <entity class="com.bcefit.projet.domain.WishMovieEntity" access="FIELD">
+    <entity class="com.bcefit.projet.domain.wish.WishMovieEntity" access="FIELD">
         <table name="WISH_MOVIE" />
         <attributes>
             <id name="uid"  />
@@ -24,7 +24,7 @@
             </basic>
         </attributes>
     </entity>
-    <entity class="com.bcefit.projet.domain.WishEpisodeEntity" access="FIELD">
+    <entity class="com.bcefit.projet.domain.wish.WishEpisodeEntity" access="FIELD">
         <table name="WISH_EPISODE" />
         <attributes>
             <id name="uid"  />
