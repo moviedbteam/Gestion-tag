@@ -13,7 +13,7 @@ public class WishEpisodeEntity extends WishContentEntity{
         super();
     }
 
-    public WishEpisodeEntity(String uid, String idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WishEpisodeEntity(String uid, Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
         super(uid,idUser);
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;

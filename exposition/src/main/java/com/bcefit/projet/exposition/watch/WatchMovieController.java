@@ -18,13 +18,13 @@ public class WatchMovieController {
     public WatchMovieController(WatchMovieApplicationServicePort watchApplicationServicePort){
         this.watchMovieApplicationServicePort = watchApplicationServicePort;
     }
-    @GetMapping(value = "/health-check-watch")
+    @GetMapping(value = "/health-check-watchmovie")
     public ResponseEntity<String> helloWatch(){
         return new ResponseEntity<>("OK", HttpStatus.OK);
     }
 
 
-    @GetMapping(value = "/watchlist/movies")
+    @GetMapping(value = "/watchmovie/movies")
     public ResponseEntity<List<WatchMovieDto>> getAllWatchMoviesAPI(){
         // 1- Récuperer les liste des "tagMovieAVoir" entities depuis l'application service
         List<WatchMovieEntity> watchMovieEntities = watchMovieApplicationServicePort.getAllWatchMovies();
@@ -34,7 +34,7 @@ public class WatchMovieController {
         return new ResponseEntity<>(watchMovieDTOS, HttpStatus.OK);
     }
 
-    @PostMapping(value ="/watchlist/movie")
+    @PostMapping(value ="/watchmovie/movie")
     public ResponseEntity<String> CreateWatchMovie(@RequestBody WatchMovieDtoLight watchMovieDtoLight){
         //1 Mapper la DTO vers l'entité WatchMovie
         WatchMovieEntity watchMovieEntity = WatchMovieMapper.mapToEntity(watchMovieDtoLight);
@@ -44,7 +44,7 @@ public class WatchMovieController {
         return new ResponseEntity<>("Watch Movie created", HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value ="/watchlist/movie/{uid}")
+    @DeleteMapping(value ="/watchmovie/movie/{uid}")
     public ResponseEntity<String> deleteWatchMovie(@PathVariable String uid)  {
 
         WatchMovieEntity watchMovieEntity = WatchMovieMapper.mapToEntity(uid);

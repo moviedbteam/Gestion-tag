@@ -1,13 +1,14 @@
 package com.bcefit.projet.exposition.watch;
 
-public class WatchMovieDtoLight {
-
+public class WatchEpisodeDtoLight {
 
     private Integer idUser;
 
-    private Integer idMovie;
+    private Integer idEpisode;
 
-    private Integer idCollection;
+    private Integer idSeason;
+
+    private Integer idTv;
 
     // Cinéma, TV, illégale ou autre
     private String viewingPlace;
@@ -19,14 +20,14 @@ public class WatchMovieDtoLight {
     // 1=Choqué, 2=Frustré, 3= Triste, 4=Songeur, 5=Emu, 6=Amusé, 7= Effrayé, 8=Las, 9=Compris, 10=Ravi, 11= Perdu, 12= Tendu
     private Integer viewingMood;
 
-
-    public WatchMovieDtoLight() {
+    public WatchEpisodeDtoLight() {
     }
 
-    public WatchMovieDtoLight(Integer idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchEpisodeDtoLight(Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.idUser = idUser;
-        this.idMovie = idMovie;
-        this.idCollection = idCollection;
+        this.idEpisode = idEpisode;
+        this.idSeason = idSeason;
+        this.idTv = idTv;
         this.viewingPlace = viewingPlace;
         this.viewingRate = viewingRate;
         this.viewingMood = viewingMood;
@@ -40,20 +41,28 @@ public class WatchMovieDtoLight {
         this.idUser = idUser;
     }
 
-
-    public Integer getIdMovie() {
-        return idMovie;
+    public Integer getIdEpisode() {
+        return idEpisode;
     }
 
-    public void setIdMovie(Integer idMovie) {this.idMovie = idMovie;
+    public void setIdEpisode(Integer idEpisode) {
+        this.idEpisode = idEpisode;
     }
 
-    public Integer getIdCollection() {
-        return idCollection;
+    public Integer getIdSeason() {
+        return idSeason;
     }
 
-    public void setIdCollection(Integer idCollection) {
-        this.idCollection = idCollection;
+    public void setIdSeason(Integer idSeason) {
+        this.idSeason = idSeason;
+    }
+
+    public Integer getIdTv() {
+        return idTv;
+    }
+
+    public void setIdTv(Integer idTv) {
+        this.idTv = idTv;
     }
 
     public String getViewingPlace() {
@@ -80,4 +89,3 @@ public class WatchMovieDtoLight {
         this.viewingMood = viewingMood;
     }
 }
-

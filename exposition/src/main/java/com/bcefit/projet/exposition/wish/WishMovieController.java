@@ -18,13 +18,13 @@ public class WishMovieController {
     public WishMovieController(WishMovieApplicationServicePort wishApplicationServicePort){
         this.wishMovieApplicationServicePort = wishApplicationServicePort;
     }
-    @GetMapping(value = "/health-check-wish")
+    @GetMapping(value = "/health-check-wishmovie")
     public ResponseEntity<String> hello(){
         return new ResponseEntity<>("OK", HttpStatus.OK);
     }
 
 
-    @GetMapping(value = "/wishlist/movies")
+    @GetMapping(value = "/wishmovie/movies")
     public ResponseEntity<List<WishMovieDto>> getAllWishMoviesAPI(){
         // 1- Récuperer les liste des "tagMovieAVoir" entities depuis l'application service
         List<WishMovieEntity> wishMovieEntities = wishMovieApplicationServicePort.getAllWishMovies();
@@ -34,7 +34,7 @@ public class WishMovieController {
         return new ResponseEntity<>(wishMovieDTOS, HttpStatus.OK);
     }
 
-    @PostMapping(value ="/wishlist/movie")
+    @PostMapping(value ="/wishmovie/movie")
     public ResponseEntity<String> CreateWishMovie(@RequestBody WishMovieDtoLight wishMovieDtoLight){
         //1 Mapper la DTO vers l'entité WishMovie
         WishMovieEntity wishMovieEntity = WishMovieMapper.mapToEntity(wishMovieDtoLight);
@@ -44,7 +44,7 @@ public class WishMovieController {
         return new ResponseEntity<>("Wish Movie created", HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value ="/wishlist/movie/{uid}")
+    @DeleteMapping(value ="/wishmovie/movie/{uid}")
     public ResponseEntity<String> deleteWishMovie(@PathVariable String uid)  {
 
         WishMovieEntity wishMovieEntity = WishMovieMapper.mapToEntity(uid);

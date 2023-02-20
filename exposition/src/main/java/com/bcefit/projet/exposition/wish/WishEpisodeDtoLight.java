@@ -1,10 +1,8 @@
 package com.bcefit.projet.exposition.wish;
 
-public class WishEpisodeDTO {
+public class WishEpisodeDtoLight {
 
-    private String uid;
-
-    private String idUser;
+    private Integer idUser;
 
     private Integer idEpisode;
 
@@ -12,36 +10,21 @@ public class WishEpisodeDTO {
 
     private Integer idTv;
 
-    public WishEpisodeDTO() {
+    public WishEpisodeDtoLight() {
     }
 
-    public WishEpisodeDTO(String uid, String idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
-        this.uid = uid;
+    public WishEpisodeDtoLight(Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
         this.idUser = idUser;
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
         this.idTv = idTv;
     }
 
-    public WishEpisodeDTO(String idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
-        this.idUser = idUser;
-        this.idEpisode = idEpisode;
-        this.idSeason = idSeason;
-        this.idTv = idTv;
-    }
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public String getIdUser() {
+    public Integer getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(Integer idUser) {
         this.idUser = idUser;
     }
 
@@ -69,3 +52,4 @@ public class WishEpisodeDTO {
         this.idTv = idTv;
     }
 }
+

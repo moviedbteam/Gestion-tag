@@ -6,12 +6,12 @@ public abstract class WishContentEntity {
 
     private String uid;
 
-    private String idUser;
+    private Integer idUser;
 
     public WishContentEntity() {
     }
 
-    public WishContentEntity(String uid, String idUser) {
+    public WishContentEntity(String uid, Integer idUser) {
         this.uid = uid;
         this.idUser = idUser;
     }
@@ -26,11 +26,11 @@ public abstract class WishContentEntity {
         this.uid = uid;
     }
 
-    public String getIdUser() {
+    public Integer getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(Integer idUser) {
         this.idUser = idUser;
     }
 }
