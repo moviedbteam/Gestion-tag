@@ -2,34 +2,34 @@ package com.bcefit.projet.domain.watch;
 
 public class WatchMovieEntity extends WatchContentEntity{
 
-    private String idMovie;
+    private Integer idMovie;
 
-    private String idCollection;
+    private Integer idCollection;
 
 
     public WatchMovieEntity() {
     }
 
 
-    public WatchMovieEntity(String uid, String idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, String idMovie, String idCollection) {
+    public WatchMovieEntity(String uid, Integer idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, Integer idMovie, Integer idCollection) {
         super(uid, idUser, viewingPlace, viewingRate, viewingMood);
         this.idMovie = idMovie;
         this.idCollection = idCollection;
     }
 
-    public String getIdMovie() {
+    public Integer getIdMovie() {
         return idMovie;
     }
 
-    public void setIdMovie(String idMovie) {
+    public void setIdMovie(Integer idMovie) {
         this.idMovie = idMovie;
     }
 
-    public String getIdCollection() {
+    public Integer getIdCollection() {
         return idCollection;
     }
 
-    public void setIdCollection(String idCollection) {
+    public void setIdCollection(Integer idCollection) {
         this.idCollection = idCollection;
     }
 }

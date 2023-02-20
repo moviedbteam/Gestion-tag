@@ -17,7 +17,7 @@ public class WatchEpisodeEntity extends WatchContentEntity{
         this.idTv = idTv;
     }
 
-    public WatchEpisodeEntity(String uid, String idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WatchEpisodeEntity(String uid, Integer idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, Integer idEpisode, Integer idSeason, Integer idTv) {
         super(uid, idUser, viewingPlace, viewingRate, viewingMood);
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;

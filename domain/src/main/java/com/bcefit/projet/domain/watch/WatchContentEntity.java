@@ -6,7 +6,7 @@ public abstract class WatchContentEntity {
 
     private String uid;
 
-    private String idUser;
+    private Integer idUser;
 
     // Cinéma, TV, illégale ou autre
     private String viewingPlace;
@@ -21,7 +21,7 @@ public abstract class WatchContentEntity {
     public WatchContentEntity() {
     }
 
-    public WatchContentEntity(String uid, String idUser, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchContentEntity(String uid, Integer idUser, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.uid = uid;
         this.idUser = idUser;
         this.viewingPlace = viewingPlace;
@@ -44,11 +44,11 @@ public abstract class WatchContentEntity {
         return uid;
     }
 
-    public String getIdUser() {
+    public Integer getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(Integer idUser) {
         this.idUser = idUser;
     }
 

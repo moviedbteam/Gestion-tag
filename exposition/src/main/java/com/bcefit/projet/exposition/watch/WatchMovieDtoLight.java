@@ -4,11 +4,11 @@ public class WatchMovieDtoLight {
 
     private String uid;
 
-    private String idUser;
+    private Integer idUser;
 
-    private String idMovie;
+    private Integer idMovie;
 
-    private String idCollection;
+    private Integer idCollection;
 
     // Cinéma, TV, illégale ou autre
     private String viewingPlace;
@@ -24,7 +24,7 @@ public class WatchMovieDtoLight {
     public WatchMovieDtoLight() {
     }
 
-    public WatchMovieDtoLight(String idUser, String idMovie, String idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchMovieDtoLight(Integer idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.idUser = idUser;
         this.idMovie = idMovie;
         this.idCollection = idCollection;
@@ -33,27 +33,27 @@ public class WatchMovieDtoLight {
         this.viewingMood = viewingMood;
     }
 
-    public String getIdUser() {
+    public Integer getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(Integer idUser) {
         this.idUser = idUser;
     }
 
 
-    public String getIdMovie() {
+    public Integer getIdMovie() {
         return idMovie;
     }
 
-    public void setIdMovie(String idMovie) {this.idMovie = idMovie;
+    public void setIdMovie(Integer idMovie) {this.idMovie = idMovie;
     }
 
-    public String getIdCollection() {
+    public Integer getIdCollection() {
         return idCollection;
     }
 
-    public void setIdCollection(String idCollection) {
+    public void setIdCollection(Integer idCollection) {
         this.idCollection = idCollection;
     }
 

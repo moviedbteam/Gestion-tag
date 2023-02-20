@@ -21,7 +21,7 @@ create table WATCH_MOVIE
     id_user INTEGER,
     id_movie INTEGER,
     id_collection INTEGER,
-    viewing_place INTEGER,
+    viewing_place VARCHAR(50),
     viewing_mood INTEGER,
     viewing_rate INTEGER,
     PRIMARY KEY (uid)
@@ -34,7 +34,7 @@ create table WATCH_EPISODE
     id_episode INTEGER,
     id_season INTEGER,
     id_tv INTEGER,
-    viewing_place INTEGER,
+    viewing_place VARCHAR(50),
     viewing_mood INTEGER,
     viewing_rate INTEGER,
     PRIMARY KEY (uid)
