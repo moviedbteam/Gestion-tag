@@ -7,24 +7,36 @@
     <mapped-superclass class="com.bcefit.projet.domain.WishContentEntity">
         <attributes>
             <id name="uid" />
-            <basic name="idUser"/>
+            <basic name="idUser">
+                <column name="id_user"/>
+            </basic>
         </attributes>
     </mapped-superclass>
     <entity class="com.bcefit.projet.domain.WishMovieEntity" access="FIELD">
-        <table name="WATCH_MOVIE" />
+        <table name="WISH_MOVIE" />
         <attributes>
             <id name="uid"  />
-            <basic name="idMovie"/>
-            <basic name="idCollection"/>
+            <basic name="idMovie">
+                <column name="id_movie"/>
+            </basic>
+            <basic name="idCollection">
+                <column name="id_collection"/>
+            </basic>
         </attributes>
     </entity>
     <entity class="com.bcefit.projet.domain.WishEpisodeEntity" access="FIELD">
         <table name="WISH_EPISODE" />
         <attributes>
             <id name="uid"  />
-            <basic name="idEpisode"/>
-            <basic name="idSeason"/>
-            <basic name="idTv"/>
+            <basic name="idEpisode">
+                <column name="id_episode"/>
+            </basic>
+            <basic name="idSeason">
+                <column name="id_season"/>
+            </basic>
+            <basic name="idTv">
+                <column name="id_tv"/>
+            </basic>
         </attributes>
     </entity>
 
