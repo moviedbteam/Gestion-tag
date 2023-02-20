@@ -23,7 +23,7 @@ public class WishEpisodeDTO {
         this.idTv = idTv;
     }
 
-    public WishEpisodeDTO(String idUser, Integer idEpisode, Integer idSerie, Integer idTv) {
+    public WishEpisodeDTO(String idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
         this.idUser = idUser;
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
