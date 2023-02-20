@@ -4,6 +4,9 @@ public class GenreMovieEntity {
     private int id;
     private String name;
 
+    public GenreMovieEntity() {
+    }
+
     public GenreMovieEntity(int id, String name) {
         this.id = id;
         this.name = name;

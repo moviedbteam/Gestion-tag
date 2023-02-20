@@ -26,9 +26,9 @@ public class WatchEpisodeController {
     @GetMapping(value = "/watchepisode/episodes")
     public ResponseEntity<List<WatchEpisodeDto>> getAllWatchEpisodesAPI(){
         // 1- Récuperer les liste des "tagEpisodeVus" entities depuis l'application service
-        List<WatchEpisodeEntity> watchEpisodeEntities = watchEpisodeApplicationServicePort.getAllWatchEpisodes();
+        List<WatchEpisodeEntity> watchEpisodeEntityList = watchEpisodeApplicationServicePort.getAllWatchEpisodes();
         // 2- Mapper la liste des entitées -> liste de dto
-        List<WatchEpisodeDto> watchEpisodeDTOS = WatchEpisodeMapper.mapToListDto(watchEpisodeEntities);
+        List<WatchEpisodeDto> watchEpisodeDTOS = WatchEpisodeMapper.mapToListDto(watchEpisodeEntityList);
         // 3- return la liste des dtos
         return new ResponseEntity<>(watchEpisodeDTOS, HttpStatus.OK);
     }

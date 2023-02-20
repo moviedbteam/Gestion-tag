@@ -27,9 +27,9 @@ public class WatchMovieController {
     @GetMapping(value = "/watchmovie/movies")
     public ResponseEntity<List<WatchMovieDto>> getAllWatchMoviesAPI(){
         // 1- Récuperer les liste des "tagMovieAVoir" entities depuis l'application service
-        List<WatchMovieEntity> watchMovieEntities = watchMovieApplicationServicePort.getAllWatchMovies();
+        List<WatchMovieEntity> watchMovieEntityList = watchMovieApplicationServicePort.getAllWatchMovies();
         // 2- Mapper la liste des entitées -> liste de dto
-        List<WatchMovieDto> watchMovieDTOS = WatchMovieMapper.mapToListDto(watchMovieEntities);
+        List<WatchMovieDto> watchMovieDTOS = WatchMovieMapper.mapToListDto(watchMovieEntityList);
         // 3- return la liste des dtos
         return new ResponseEntity<>(watchMovieDTOS, HttpStatus.OK);
     }

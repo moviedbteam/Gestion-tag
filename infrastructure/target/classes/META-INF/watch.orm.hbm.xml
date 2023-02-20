@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+                 xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+    <mapped-superclass class="com.bcefit.projet.domain.watch.WatchContentEntity">
+        <attributes>
+            <id name="uid" />
+            <basic name="idUser">
+                <column name="id_user"/>
+            </basic>
+            <basic name="viewingPlace">
+                <column name="viewing_place"/>
+            </basic>
+            <basic name="viewingMood">
+                <column name="viewing_mood"/>
+            </basic>
+            <basic name="viewingRate">
+                <column name="viewing_rate"/>
+            </basic>
+        </attributes>
+    </mapped-superclass>
+    <entity class="com.bcefit.projet.domain.watch.WatchMovieEntity" access="FIELD">
+        <table name="WATCH_MOVIE" />
+        <attributes>
+            <id name="uid"  />
+            <basic name="idMovie">
+                <column name="id_movie"/>
+            </basic>
+            <basic name="idCollection">
+                <column name="id_collection"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="com.bcefit.projet.domain.watch.WatchEpisodeEntity" access="FIELD">
+        <table name="WATCH_EPISODE" />
+        <attributes>
+            <id name="uid"  />
+            <basic name="idEpisode">
+                <column name="id_episode"/>
+            </basic>
+            <basic name="idSeason">
+                <column name="id_season"/>
+            </basic>
+            <basic name="idTv">
+                <column name="id_tv"/>
+            </basic>
+        </attributes>
+    </entity>
+
+
+</entity-mappings>
