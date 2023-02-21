@@ -23,7 +23,7 @@ public class WishEpisodeController {
     }
 
 
-    @GetMapping(value = "/wishepisode/episodes")
+    @GetMapping(value = "/wish/episodes")
     public ResponseEntity<List<WishEpisodeDto>> getAllWishEpisodesAPI(){
         // 1- Récuperer les liste des "tagEpisodeAVoir" entities depuis l'application service
         List<WishEpisodeEntity> wishEpisodeEntityList = wishEpisodeApplicationServicePort.getAllWishEpisodes();
@@ -33,7 +33,7 @@ public class WishEpisodeController {
         return new ResponseEntity<>(wishEpisodeDTOS, HttpStatus.OK);
     }
 
-    @PostMapping(value ="/wishepisode/episode")
+    @PostMapping(value ="/wish/episode")
     public ResponseEntity<String> CreateWishEpisode(@RequestBody WishEpisodeDtoLight wishEpisodeDtoLight){
         //1 Mapper la DTO vers l'entité WishEpisode
         WishEpisodeEntity wishEpisodeEntity = WishEpisodeMapper.mapToEntity(wishEpisodeDtoLight);
@@ -43,7 +43,7 @@ public class WishEpisodeController {
         return new ResponseEntity<>("Wish Episode created", HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value ="/wishepisode/episode/{uid}")
+    @DeleteMapping(value ="/wish/episode/{uid}")
     public ResponseEntity<String> deleteWishEpisode(@PathVariable String uid)  {
 
         WishEpisodeEntity wishEpisodeEntity = WishEpisodeMapper.mapToEntity(uid);
