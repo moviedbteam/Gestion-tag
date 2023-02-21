@@ -4,6 +4,9 @@ public class GenreTvEntity {
     private int id;
     private String name;
 
+    public GenreTvEntity() {
+    }
+
     public GenreTvEntity(int id, String name) {
         this.id = id;
         this.name = name;

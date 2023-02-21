@@ -23,17 +23,17 @@ public class WatchEpisodeController {
     }
 
 
-    @GetMapping(value = "/watchepisode/episodes")
+    @GetMapping(value = "/watch/episodes")
     public ResponseEntity<List<WatchEpisodeDto>> getAllWatchEpisodesAPI(){
         // 1- Récuperer les liste des "tagEpisodeVus" entities depuis l'application service
-        List<WatchEpisodeEntity> watchEpisodeEntities = watchEpisodeApplicationServicePort.getAllWatchEpisodes();
+        List<WatchEpisodeEntity> watchEpisodeEntityList = watchEpisodeApplicationServicePort.getAllWatchEpisodes();
         // 2- Mapper la liste des entitées -> liste de dto
-        List<WatchEpisodeDto> watchEpisodeDTOS = WatchEpisodeMapper.mapToListDto(watchEpisodeEntities);
+        List<WatchEpisodeDto> watchEpisodeDTOS = WatchEpisodeMapper.mapToListDto(watchEpisodeEntityList);
         // 3- return la liste des dtos
         return new ResponseEntity<>(watchEpisodeDTOS, HttpStatus.OK);
     }
 
-    @PostMapping(value ="/watchepisode/episode")
+    @PostMapping(value ="/watch/episode")
     public ResponseEntity<String> CreateWatchEpisode(@RequestBody WatchEpisodeDtoLight watchEpisodeDtoLight){
         //1 Mapper la DTO vers l'entité WatchEpisode
         WatchEpisodeEntity watchEpisodeEntity = WatchEpisodeMapper.mapToEntity(watchEpisodeDtoLight);
@@ -43,7 +43,7 @@ public class WatchEpisodeController {
         return new ResponseEntity<>("Watch Episode created", HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value ="/watchepisode/episode/{uid}")
+    @DeleteMapping(value ="/watch/episode/{uid}")
     public ResponseEntity<String> deleteWatchEpisode(@PathVariable String uid)  {
 
         WatchEpisodeEntity watchEpisodeEntity = WatchEpisodeMapper.mapToEntity(uid);

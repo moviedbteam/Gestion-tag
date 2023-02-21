@@ -27,9 +27,9 @@ public class WishMovieController {
     @GetMapping(value = "/wishmovie/movies")
     public ResponseEntity<List<WishMovieDto>> getAllWishMoviesAPI(){
         // 1- Récuperer les liste des "tagMovieAVoir" entities depuis l'application service
-        List<WishMovieEntity> wishMovieEntities = wishMovieApplicationServicePort.getAllWishMovies();
+        List<WishMovieEntity> wishMovieEntityList = wishMovieApplicationServicePort.getAllWishMovies();
         // 2- Mapper la liste des entitées -> liste de dto
-        List<WishMovieDto> wishMovieDTOS = WishMovieMapper.mapToListDto(wishMovieEntities);
+        List<WishMovieDto> wishMovieDTOS = WishMovieMapper.mapToListDto(wishMovieEntityList);
         // 3- return la liste des dtos
         return new ResponseEntity<>(wishMovieDTOS, HttpStatus.OK);
     }

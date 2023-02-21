@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: '@project.name@'
+  profiles:
+    active: '@spring.profiles.active@'
+  jta:
+    enabled: false
+  jpa:
+    open-in-view: false
+    driver-class-name: org.postgresql.Driver
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      show-sql: true
+      format-sql: true
+
+    mapping-resources:
+      - META-INF/wish.orm.hbm.xml
+      - META-INF/watch.orm.hbm.xml
+      - META-INF/genreMovie.orm.hbm.xml
+      - META-INF/genreTv.orm.hbm.xml
+      - META-INF/streamingSubscription.orm.hbm.xml
+    show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tag
+    username: postgres
+    password: admin
+
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 0

@@ -26,9 +26,9 @@ public class WishEpisodeController {
     @GetMapping(value = "/wishepisode/episodes")
     public ResponseEntity<List<WishEpisodeDto>> getAllWishEpisodesAPI(){
         // 1- Récuperer les liste des "tagEpisodeAVoir" entities depuis l'application service
-        List<WishEpisodeEntity> wishEpisodeEntities = wishEpisodeApplicationServicePort.getAllWishEpisodes();
+        List<WishEpisodeEntity> wishEpisodeEntityList = wishEpisodeApplicationServicePort.getAllWishEpisodes();
         // 2- Mapper la liste des entitées -> liste de dto
-        List<WishEpisodeDto> wishEpisodeDTOS = WishEpisodeMapper.mapToListDto(wishEpisodeEntities);
+        List<WishEpisodeDto> wishEpisodeDTOS = WishEpisodeMapper.mapToListDto(wishEpisodeEntityList);
         // 3- return la liste des dtos
         return new ResponseEntity<>(wishEpisodeDTOS, HttpStatus.OK);
     }
