@@ -43,6 +43,11 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
 
 
     </dependencies>
@@ -63,7 +68,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.bcefit.epita.Starter</mainClass>
+                    <mainClass>com.bcefit.projet.Starter</mainClass>
                 </configuration>
                 <executions>
                     <execution>
