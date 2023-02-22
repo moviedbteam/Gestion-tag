@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                                     http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+    <entity class="com.example.Book">
+        <attributes>
+            <id name="id">
+                <column name="book_id"/>
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="title">
+                <column name="title"/>
+            </basic>
+            <basic name="author">
+                <column name="author"/>
+            </basic>
+            <many-to-many name="categories">
+                <join-table name="book_category">
+                    <join-column name="book_id" referenced-column-name="book_id"/>
+                    <inverse-join-column name="category_id" referenced-column-name="category_id"/>
+                </join-table>
+            </many-to-many>
+        </attributes>
+    </entity>
+    <entity class="com.example.Category">
+        <attributes>
+            <id name="id">
+                <column name="category_id"/>
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="name">
+                <column name="name"/>
+            </basic>
+            <many-to-many name="books">
+                <join-table name="book_category">
+                    <join-column name="category_id" referenced-column-name="category_id"/>
+                    <inverse-join-column name="book_id" referenced-column-name="book_id"/>
+                </join-table>
+            </many-to-many>
+        </attributes>
+    </entity>
+</entity-mappings>

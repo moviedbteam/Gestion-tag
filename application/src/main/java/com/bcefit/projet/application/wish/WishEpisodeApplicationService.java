@@ -33,12 +33,12 @@ public class WishEpisodeApplicationService implements WishEpisodeApplicationServ
     public void addWishEpisode(WishEpisodeEntity wishEpisodeEntity) {
         wishEpisodeRepository.addWishEpisode(wishEpisodeEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la wishList
-        jmsTemplate.send("Q_ADD_Wish_EPISODE", new MessageString(wishEpisodeEntity.getUid()));
+        //jmsTemplate.send("Q_ADD_Wish_EPISODE", new MessageString(wishEpisodeEntity.getUid()));
     }
 
     @Override
     public void deleteWishEpisode(WishEpisodeEntity wishEpisodeEntity) {
         wishEpisodeRepository.deleteWishEipsode(wishEpisodeEntity);
-        jmsTemplate.send("Q_DELETE_Wish_EPISODE", new MessageString(wishEpisodeEntity.getUid()));
+        //jmsTemplate.send("Q_DELETE_Wish_EPISODE", new MessageString(wishEpisodeEntity.getUid()));
     }
 }

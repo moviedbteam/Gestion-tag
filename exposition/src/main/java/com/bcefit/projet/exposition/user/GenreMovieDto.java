@@ -1,5 +1,8 @@
 package com.bcefit.projet.exposition.user;
 
+import org.springframework.stereotype.Component;
+
+
 public class GenreMovieDto {
 
     private int id;

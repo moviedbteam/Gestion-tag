@@ -1,43 +1,45 @@
-package com.bcefit.projet.domain.user;
+package com.bcefit.projet.exposition.user;
+
+import com.bcefit.projet.domain.user.GenreMovieEntity;
+import com.bcefit.projet.domain.user.GenreTvEntity;
+import com.bcefit.projet.domain.user.StreamingSubscriptionEntity;
 
 import java.util.List;
 import java.util.UUID;
 
-public class UserAccountEntity {
-
+public class UserAccountDto {
 
     private UUID idUser;
 
     private String userName;
 
-    private String email;
+    private String Email;
 
     private Integer birthYear;
 
-    private List<GenreMovieEntity> genreMovieList;
+    private List<GenreMovieDto> genreMovieList;
 
-    private List<GenreTvEntity> genreTvList;
+    private List<GenreTvDto> genreTvList;
 
-    private List<StreamingSubscriptionEntity> streamingSubscriptionList;
+    private List<StreamingSubscriptionDto> streamingSubscriptionList;
 
     private boolean adultContent;
 
     private boolean enableAccount;
 
-    public UserAccountEntity(UUID idUser, String userName, String email, Integer birthYear, List<GenreMovieEntity> genreMovieList, List<GenreTvEntity> genreTvList, List<StreamingSubscriptionEntity> streamingSubscriptionList, boolean adultContent, boolean enableAccount) {
+    public UserAccountDto() {
+    }
+
+    public UserAccountDto(UUID idUser, String userName, String email, Integer birthYear, List<GenreMovieDto> genreMovieList, List<GenreTvDto> genreTvList, List<StreamingSubscriptionDto> streamingSubscriptionList, boolean adultContent, boolean enableAccount) {
         this.idUser = idUser;
         this.userName = userName;
-        this.email= email;
+        Email = email;
         this.birthYear = birthYear;
         this.genreMovieList = genreMovieList;
         this.genreTvList = genreTvList;
         this.streamingSubscriptionList = streamingSubscriptionList;
         this.adultContent = adultContent;
         this.enableAccount = enableAccount;
-    }
-
-    public UserAccountEntity() {
-
     }
 
     public UUID getIdUser() {
@@ -57,42 +59,42 @@ public class UserAccountEntity {
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public Integer getBirthYear() {
-        return this.birthYear;
+        return birthYear;
     }
 
     public void setBirthYear(Integer birthYear) {
         this.birthYear = birthYear;
     }
 
-    public List<GenreMovieEntity> getGenreMovieList() {
-        return this.genreMovieList;
+    public List<GenreMovieDto> getGenreMovieList() {
+        return genreMovieList;
     }
 
-    public void setGenreMovieList(List<GenreMovieEntity> genreMovieList) {
+    public void setGenreMovieList(List<GenreMovieDto> genreMovieList) {
         this.genreMovieList = genreMovieList;
     }
 
-    public List<GenreTvEntity> getGenreTvList() {
-        return this.genreTvList;
+    public List<GenreTvDto> getGenreTvList() {
+        return genreTvList;
     }
 
-    public void setGenreTvList(List<GenreTvEntity> genreTvList) {
+    public void setGenreTvList(List<GenreTvDto> genreTvList) {
         this.genreTvList = genreTvList;
     }
 
-    public List<StreamingSubscriptionEntity> getStreamingSubscriptionList() {
+    public List<StreamingSubscriptionDto> getStreamingSubscriptionList() {
         return streamingSubscriptionList;
     }
 
-    public void setStreamingSubscriptionList(List<StreamingSubscriptionEntity> streamingSubscriptionList) {
+    public void setStreamingSubscriptionList(List<StreamingSubscriptionDto> streamingSubscriptionList) {
         this.streamingSubscriptionList = streamingSubscriptionList;
     }
 

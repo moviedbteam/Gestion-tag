@@ -35,14 +35,14 @@ public class WatchEpisodeApplicationService implements WatchEpisodeApplicationSe
 
         watchEpisodeRepository.addWatchEpisode(WatchEpisodeEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la watchList
-        jmsTemplate.send("Q_ADD_Watch_MOVIE", new MessageString(WatchEpisodeEntity.getUid()));
+        //jmsTemplate.send("Q_ADD_Watch_MOVIE", new MessageString(WatchEpisodeEntity.getUid()));
     }
 
     @Override
     public void deleteWatchEpisode(WatchEpisodeEntity WatchEpisodeEntity){
         watchEpisodeRepository.deleteWatchEpisode(WatchEpisodeEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la watchList
-        jmsTemplate.send("Q_DELETE_Watch_MOVIE", new MessageString(WatchEpisodeEntity.getUid()));
+        //jmsTemplate.send("Q_DELETE_Watch_MOVIE", new MessageString(WatchEpisodeEntity.getUid()));
     }
 
 }

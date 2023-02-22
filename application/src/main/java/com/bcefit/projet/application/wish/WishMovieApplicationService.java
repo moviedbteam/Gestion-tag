@@ -35,14 +35,14 @@ public class WishMovieApplicationService implements WishMovieApplicationServiceP
 
         wishMovieRepository.addWishMovie(wishMovieEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la wishList
-        jmsTemplate.send("Q_ADD_Wish_MOVIE", new MessageString(wishMovieEntity.getUid()));
+        //jmsTemplate.send("Q_ADD_Wish_MOVIE", new MessageString(wishMovieEntity.getUid()));
     }
 
     @Override
     public void deleteWishMovie(WishMovieEntity wishMovieEntity){
         wishMovieRepository.deleteWishMovie(wishMovieEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la wishList
-        jmsTemplate.send("Q_DELETE_Wish_MOVIE", new MessageString(wishMovieEntity.getUid()));
+        //jmsTemplate.send("Q_DELETE_Wish_MOVIE", new MessageString(wishMovieEntity.getUid()));
     }
 
 }

@@ -35,14 +35,14 @@ public class WatchMovieApplicationService implements WatchMovieApplicationServic
 
         watchMovieRepository.addWatchMovie(watchMovieEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la watchList
-        jmsTemplate.send("Q_ADD_Watch_MOVIE", new MessageString(watchMovieEntity.getUid()));
+        //jmsTemplate.send("Q_ADD_Watch_MOVIE", new MessageString(watchMovieEntity.getUid()));
     }
 
     @Override
     public void deleteWatchMovie(WatchMovieEntity watchMovieEntity){
         watchMovieRepository.deleteWatchMovie(watchMovieEntity);
         // Envoie d'un message pour informer de l'ajout d'un film dans la watchList
-        jmsTemplate.send("Q_DELETE_Watch_MOVIE", new MessageString(watchMovieEntity.getUid()));
+        //jmsTemplate.send("Q_DELETE_Watch_MOVIE", new MessageString(watchMovieEntity.getUid()));
     }
 
 }
