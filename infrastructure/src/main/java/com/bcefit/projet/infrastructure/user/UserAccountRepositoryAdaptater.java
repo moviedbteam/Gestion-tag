@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Component
 public class UserAccountRepositoryAdaptater implements UserAccountRepository {
@@ -19,8 +20,8 @@ public class UserAccountRepositoryAdaptater implements UserAccountRepository {
     }
 
     @Override
-    public UserAccountEntity findById(final String id) {
-        return userAccountJpaRepository.findById(id).orElseThrow(() -> new ResourceNotExistsException());
+    public UserAccountEntity findById(final UUID id) {
+        return userAccountJpaRepository.getUserAccountEntityByIdUser(id);
 	}
 
     @Override

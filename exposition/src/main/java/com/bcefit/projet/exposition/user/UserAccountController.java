@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
@@ -26,13 +27,14 @@ public class UserAccountController {
     public ResponseEntity<String> hello(){return new ResponseEntity<>("OK", HttpStatus.OK);}
 
 
-    @GetMapping(value = "/user/{id}", produces = {"application/json"})
-    public UserAccountDto getUserAccountByIdAPI(@PathVariable final String id){
+
+    @GetMapping(value = "/user/{id}",produces = { "application/json" } )
+    public UserAccountDto getUserAccountByIdAPI(@PathVariable final UUID id){
 
         UserAccountEntity userAccountEntity = userAccountApplicationServicePort.findById(id);
         return UserAccountMapper.mapToDto(userAccountEntity);
+        }
 
-    }
 
     @GetMapping(value = "/users")
     public ResponseEntity<List<UserAccountDto>> getAllUsersAPI(){

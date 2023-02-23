@@ -1,5 +1,7 @@
 package com.bcefit.projet.domain.user;
 
+import java.util.UUID;
+
 public class GenreMovieEntity {
     private int id;
     private String name;
@@ -11,6 +13,7 @@ public class GenreMovieEntity {
         this.id = id;
         this.name = name;
     }
+
 
     public int getId() {
         return id;

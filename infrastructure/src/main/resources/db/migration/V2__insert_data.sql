@@ -93,3 +93,15 @@ VALUES
     (10768, 'War & Politics'),
     (37, 'Western');
 
+
+INSERT INTO USER_ACCOUNT (id_user, user_name, email, birth_year, adult_content, enable_account)
+VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 'johndoe', 'johndoe@example.com', 1985, false, true);
+
+INSERT INTO USER_GENRE_MOVIE (id_user, id_genre_movie) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 9648);
+INSERT INTO USER_GENRE_MOVIE (id_user, id_genre_movie) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 16);
+
+INSERT INTO USER_GENRE_TV (id_user, id_genre_tv) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 10759);
+INSERT INTO USER_GENRE_TV (id_user, id_genre_tv) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 10765);
+
+INSERT INTO USER_STREAMING_SUBSCRIPTION (id_user, id_streaming_subscription) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 75);
+INSERT INTO USER_STREAMING_SUBSCRIPTION (id_user, id_streaming_subscription) VALUES ('a44c7dfc-56c9-4a70-a6be-5ce5ca5b5d5d', 60);

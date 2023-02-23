@@ -1,8 +1,5 @@
 package com.bcefit.projet.exposition.user;
 
-import com.bcefit.projet.domain.user.GenreMovieEntity;
-import com.bcefit.projet.domain.user.GenreTvEntity;
-import com.bcefit.projet.domain.user.StreamingSubscriptionEntity;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,11 +14,11 @@ public class UserAccountDto {
 
     private Integer birthYear;
 
-    private List<GenreMovieDto> genreMovieList;
+    //private List<GenreMovieDto> genreMovieList;
 
-    private List<GenreTvDto> genreTvList;
+    //private List<GenreTvDto> genreTvList;
 
-    private List<StreamingSubscriptionDto> streamingSubscriptionList;
+    //private List<StreamingSubscriptionDto> streamingSubscriptionList;
 
     private boolean adultContent;
 
@@ -30,14 +27,11 @@ public class UserAccountDto {
     public UserAccountDto() {
     }
 
-    public UserAccountDto(UUID idUser, String userName, String email, Integer birthYear, List<GenreMovieDto> genreMovieList, List<GenreTvDto> genreTvList, List<StreamingSubscriptionDto> streamingSubscriptionList, boolean adultContent, boolean enableAccount) {
+    public UserAccountDto(UUID idUser, String userName, String email, Integer birthYear, boolean adultContent, boolean enableAccount) {
         this.idUser = idUser;
         this.userName = userName;
         Email = email;
         this.birthYear = birthYear;
-        this.genreMovieList = genreMovieList;
-        this.genreTvList = genreTvList;
-        this.streamingSubscriptionList = streamingSubscriptionList;
         this.adultContent = adultContent;
         this.enableAccount = enableAccount;
     }
@@ -74,29 +68,6 @@ public class UserAccountDto {
         this.birthYear = birthYear;
     }
 
-    public List<GenreMovieDto> getGenreMovieList() {
-        return genreMovieList;
-    }
-
-    public void setGenreMovieList(List<GenreMovieDto> genreMovieList) {
-        this.genreMovieList = genreMovieList;
-    }
-
-    public List<GenreTvDto> getGenreTvList() {
-        return genreTvList;
-    }
-
-    public void setGenreTvList(List<GenreTvDto> genreTvList) {
-        this.genreTvList = genreTvList;
-    }
-
-    public List<StreamingSubscriptionDto> getStreamingSubscriptionList() {
-        return streamingSubscriptionList;
-    }
-
-    public void setStreamingSubscriptionList(List<StreamingSubscriptionDto> streamingSubscriptionList) {
-        this.streamingSubscriptionList = streamingSubscriptionList;
-    }
 
     public boolean isAdultContent() {
         return adultContent;

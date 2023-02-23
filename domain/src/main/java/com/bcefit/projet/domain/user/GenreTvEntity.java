@@ -4,6 +4,7 @@ public class GenreTvEntity {
     private int id;
     private String name;
 
+
     public GenreTvEntity() {
     }
 

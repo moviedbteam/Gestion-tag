@@ -4,7 +4,8 @@
                  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
                                      http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
                  version="2.2">
-    <entity class="com.bcefit.projet.domain.user.UserAccountEntity" >
+    <entity class="com.bcefit.projet.domain.user.UserAccountEntity" name="UserAccountEntity">
+        <table name="USER_ACCOUNT" />
         <attributes>
             <id name="idUser">
                 <column name="id_user"/>
@@ -25,22 +26,57 @@
             <basic name="enableAccount">
                 <column name="enable_account"/>
             </basic>
-            <many-to-many name="genreMovieList" fetch="LAZY" target-entity="com.bcefit.projet.domain.user.GenreMovieEntity">
-                <join-table name="USER_GENRE_MOVIE">
-                    <join-column name="id_user" referenced-column-name="USER_ACCOUNT"/>
+            <!--many-to-many name="genreMovieList"  fetch="LAZY">
+                <join-table name="user_genre_movie">
+                    <join-column name="id_user"/>
+                    <inverse-join-column name="id_genre_movie"/>
                 </join-table>
-                <map-key>
-            </many-to-many>
-            <many-to-many name="genreTvList" fetch="LAZY" target-entity="com.bcefit.projet.domain.user.GenreTvEntity">
-                <join-table name="USER_GENRE_TV">
-                    <join-column name="id_user" referenced-column-name="USER_ACCOUNT"/>
-                </join-table>
-            </many-to-many>
-            <many-to-many name="streamingSubscriptionList" fetch="LAZY" target-entity="com.bcefit.projet.domain.user.StreamingSubscriptionEntity">
-                <join-table name="USER_STREAMING_SUBSCRIPTION">
-                    <join-column name="id_user" referenced-column-name="USER_ACCOUNT"/>
+            </-many-to-many>
+            <many-to-many name="genreTvList"  fetch="LAZY">
+                <join-table name="user_genre_tv">
+                    <join-column name="id_user"/>
+                    <inverse-join-column name="id_genre_tv"/>
                 </join-table>
             </many-to-many>
+            <many-to-many name="streamingSubscriptionList"  fetch="LAZY">
+                <join-table name="user_streaming_subscription" >
+                    <join-column name="id_user"/>
+                    <inverse-join-column name="id_streaming_subscription"/>
+                </join-table>
+            </many-to-many-->
+        </attributes>
+    </entity>
+    <entity class="com.bcefit.projet.domain.user.GenreMovieEntity" name="GenreMovieEntity">
+        <table name="GENRE_MOVIE" />
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+            </id>
+            <basic name="name">
+                <column name="name"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="com.bcefit.projet.domain.user.GenreTvEntity" name="GenreTvEntity">
+        <table name="GENRE_TV" />
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+            </id>
+            <basic name="name">
+                <column name="name"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="com.bcefit.projet.domain.user.StreamingSubscriptionEntity" name="StreamingSubscriptionEntity">
+        <table name="STREAMING_SUBSCRIPTION" />
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+            </id>
+            <basic name="name">
+                <column name="name"/>
+            </basic>
         </attributes>
     </entity>
 </entity-mappings>

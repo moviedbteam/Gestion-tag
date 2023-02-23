@@ -5,6 +5,7 @@ public class StreamingSubscriptionEntity {
     private int id;
     private String name;
 
+
     public StreamingSubscriptionEntity() {
     }
 

@@ -1,7 +1,6 @@
 package com.bcefit.projet.domain.user;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class UserAccountEntity {
 
@@ -14,24 +13,21 @@ public class UserAccountEntity {
 
     private Integer birthYear;
 
-    private List<GenreMovieEntity> genreMovieList;
+    //private Set<GenreMovieEntity> genreMovieSet;
 
-    private List<GenreTvEntity> genreTvList;
+    //private Set<GenreTvEntity> genreTvSet;
 
-    private List<StreamingSubscriptionEntity> streamingSubscriptionList;
+    //private Set<StreamingSubscriptionEntity> streamingSubscriptionSet;
 
     private boolean adultContent;
 
     private boolean enableAccount;
 
-    public UserAccountEntity(UUID idUser, String userName, String email, Integer birthYear, List<GenreMovieEntity> genreMovieList, List<GenreTvEntity> genreTvList, List<StreamingSubscriptionEntity> streamingSubscriptionList, boolean adultContent, boolean enableAccount) {
+    public UserAccountEntity(UUID idUser, String userName, String email, Integer birthYear, boolean adultContent, boolean enableAccount) {
         this.idUser = idUser;
         this.userName = userName;
-        this.email= email;
+        this.email = email;
         this.birthYear = birthYear;
-        this.genreMovieList = genreMovieList;
-        this.genreTvList = genreTvList;
-        this.streamingSubscriptionList = streamingSubscriptionList;
         this.adultContent = adultContent;
         this.enableAccount = enableAccount;
     }
@@ -72,29 +68,6 @@ public class UserAccountEntity {
         this.birthYear = birthYear;
     }
 
-    public List<GenreMovieEntity> getGenreMovieList() {
-        return this.genreMovieList;
-    }
-
-    public void setGenreMovieList(List<GenreMovieEntity> genreMovieList) {
-        this.genreMovieList = genreMovieList;
-    }
-
-    public List<GenreTvEntity> getGenreTvList() {
-        return this.genreTvList;
-    }
-
-    public void setGenreTvList(List<GenreTvEntity> genreTvList) {
-        this.genreTvList = genreTvList;
-    }
-
-    public List<StreamingSubscriptionEntity> getStreamingSubscriptionList() {
-        return streamingSubscriptionList;
-    }
-
-    public void setStreamingSubscriptionList(List<StreamingSubscriptionEntity> streamingSubscriptionList) {
-        this.streamingSubscriptionList = streamingSubscriptionList;
-    }
 
     public boolean isAdultContent() {
         return adultContent;
