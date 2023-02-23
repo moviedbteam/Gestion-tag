@@ -17,7 +17,7 @@ public class WishEpisodeController {
     public WishEpisodeController(WishEpisodeApplicationServicePort wishApplicationServicePort){
         this.wishEpisodeApplicationServicePort = wishApplicationServicePort;
     }
-    @GetMapping(value = "//ep")
+    @GetMapping(value = "/health-check-wishepisode")
     public ResponseEntity<String> hello(){
         return new ResponseEntity<>("OK", HttpStatus.OK);
     }
