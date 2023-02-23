@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
@@ -44,7 +45,7 @@ public class WishEpisodeController {
     }
 
     @DeleteMapping(value ="/wish/episode/{uid}")
-    public ResponseEntity<String> deleteWishEpisode(@PathVariable String uid)  {
+    public ResponseEntity<String> deleteWishEpisode(@PathVariable UUID uid)  {
 
         WishEpisodeEntity wishEpisodeEntity = WishEpisodeMapper.mapToEntity(uid);
         wishEpisodeApplicationServicePort.deleteWishEpisode(wishEpisodeEntity);

@@ -5,6 +5,7 @@ import com.bcefit.projet.domain.watch.WatchMovieEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class WatchEpisodeMapper {
 
@@ -34,7 +35,7 @@ public class WatchEpisodeMapper {
         return entity;
     }
 
-    public static WatchEpisodeEntity mapToEntity(String uid){
+    public static WatchEpisodeEntity mapToEntity(UUID uid){
         WatchEpisodeEntity entity = new WatchEpisodeEntity();
         entity.setUid(uid);
         return entity;

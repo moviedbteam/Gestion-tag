@@ -1,8 +1,10 @@
 package com.bcefit.projet.exposition.wish;
 
+import java.util.UUID;
+
 public class WishEpisodeDtoLight {
 
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idEpisode;
 
@@ -13,18 +15,18 @@ public class WishEpisodeDtoLight {
     public WishEpisodeDtoLight() {
     }
 
-    public WishEpisodeDtoLight(Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WishEpisodeDtoLight(UUID idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
         this.idUser = idUser;
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
         this.idTv = idTv;
     }
 
-    public Integer getIdUser() {
+    public UUID getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 

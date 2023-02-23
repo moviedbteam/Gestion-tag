@@ -4,9 +4,9 @@ import java.util.UUID;
 
 public abstract class WatchContentEntity {
 
-    private String uid;
+    private UUID uid;
 
-    private Integer idUser;
+    private UUID idUser;
 
     // Cinéma, TV, illégale ou autre
     private String viewingPlace;
@@ -21,7 +21,7 @@ public abstract class WatchContentEntity {
     public WatchContentEntity() {
     }
 
-    public WatchContentEntity(String uid, Integer idUser, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchContentEntity(UUID uid, UUID idUser, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.uid = uid;
         this.idUser = idUser;
         this.viewingPlace = viewingPlace;
@@ -30,25 +30,25 @@ public abstract class WatchContentEntity {
     }
 
 
-    public WatchContentEntity(String uuid) {
+    public WatchContentEntity(UUID uuid) {
         this.uid = uuid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 
-    public void setAutoUid(){this.uid = UUID.randomUUID().toString();}
+    public void setAutoUid(){this.uid = UUID.randomUUID();}
 
-    public String getUid() {
-        return uid;
+    public UUID getUid() {
+        return this.uid;
     }
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 

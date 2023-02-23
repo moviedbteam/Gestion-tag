@@ -1,18 +1,20 @@
 package com.bcefit.projet.exposition.watch;
 
+import java.util.UUID;
+
 public class WatchEpisodeDtoUid {
 
-    private String uid;
+    private UUID uid;
 
-    public WatchEpisodeDtoUid(String uid) {
+    public WatchEpisodeDtoUid(UUID uid) {
         this.uid = uid;
     }
 
-    public String getUid() {
-        return uid;
+    public UUID getUid() {
+        return this.uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 }

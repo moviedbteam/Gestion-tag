@@ -6,6 +6,7 @@ import com.bcefit.projet.domain.watch.WatchMovieEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class WatchMovieMapper {
@@ -34,7 +35,7 @@ public class WatchMovieMapper {
         return entity;
     }
 
-    public static WatchMovieEntity mapToEntity(String uid){
+    public static WatchMovieEntity mapToEntity(UUID uid){
         WatchMovieEntity entity = new WatchMovieEntity();
         entity.setUid(uid);
         return entity;

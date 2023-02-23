@@ -1,10 +1,10 @@
 package com.bcefit.projet.exposition.wish;
 
+import java.util.UUID;
+
 public class WishMovieDtoLight {
 
-    private String uid;
-
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idMovie;
 
@@ -13,31 +13,31 @@ public class WishMovieDtoLight {
     public WishMovieDtoLight() {
     }
 
-    public WishMovieDtoLight(Integer idUser, Integer idMovie, Integer idCollection) {
+    public WishMovieDtoLight(UUID idUser, Integer idMovie, Integer idCollection) {
         this.idUser = idUser;
         this.idMovie = idMovie;
         this.idCollection = idCollection;
     }
 
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 
 
     public Integer getIdMovie() {
-        return idMovie;
+        return this.idMovie;
     }
 
     public void setIdMovie(Integer idMovie) {this.idMovie = idMovie;
     }
 
     public Integer getIdCollection() {
-        return idCollection;
+        return this.idCollection;
     }
 
     public void setIdCollection(Integer idCollection) {

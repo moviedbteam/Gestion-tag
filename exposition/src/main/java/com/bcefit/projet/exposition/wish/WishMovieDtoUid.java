@@ -1,17 +1,19 @@
 package com.bcefit.projet.exposition.wish;
 
-public class WishMovieDtoUid {
-    private String uid;
+import java.util.UUID;
 
-    public WishMovieDtoUid(String uid) {
+public class WishMovieDtoUid {
+    private UUID uid;
+
+    public WishMovieDtoUid(UUID uid) {
         this.uid = uid;
     }
 
-    public String getUid() {
-        return uid;
+    public UUID getUid() {
+        return this.uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 }

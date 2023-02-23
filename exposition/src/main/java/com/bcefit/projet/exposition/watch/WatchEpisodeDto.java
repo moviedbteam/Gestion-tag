@@ -1,10 +1,12 @@
 package com.bcefit.projet.exposition.watch;
 
+import java.util.UUID;
+
 public class WatchEpisodeDto {
 
-    private String uid;
+    private UUID uid;
 
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idEpisode;
 
@@ -25,7 +27,7 @@ public class WatchEpisodeDto {
     public WatchEpisodeDto() {
     }
 
-    public WatchEpisodeDto(String uid, Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchEpisodeDto(UUID uid, UUID idUser, Integer idEpisode, Integer idSeason, Integer idTv, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.uid = uid;
         this.idUser = idUser;
         this.idEpisode = idEpisode;
@@ -36,24 +38,24 @@ public class WatchEpisodeDto {
         this.viewingMood = viewingMood;
     }
 
-    public String getUid() {
-        return uid;
+    public UUID getUid() {
+        return this.uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 
     public Integer getIdEpisode() {
-        return idEpisode;
+        return this.idEpisode;
     }
 
     public void setIdEpisode(Integer idEpisode) {
@@ -61,7 +63,7 @@ public class WatchEpisodeDto {
     }
 
     public Integer getIdSeason() {
-        return idSeason;
+        return this.idSeason;
     }
 
     public void setIdSeason(Integer idSeason) {
@@ -69,7 +71,7 @@ public class WatchEpisodeDto {
     }
 
     public Integer getIdTv() {
-        return idTv;
+        return this.idTv;
     }
 
     public void setIdTv(Integer idTv) {
@@ -77,7 +79,7 @@ public class WatchEpisodeDto {
     }
 
     public String getViewingPlace() {
-        return viewingPlace;
+        return this.viewingPlace;
     }
 
     public void setViewingPlace(String viewingPlace) {
@@ -85,7 +87,7 @@ public class WatchEpisodeDto {
     }
 
     public Integer getViewingRate() {
-        return viewingRate;
+        return this.viewingRate;
     }
 
     public void setViewingRate(Integer viewingRate) {
@@ -93,7 +95,7 @@ public class WatchEpisodeDto {
     }
 
     public Integer getViewingMood() {
-        return viewingMood;
+        return this.viewingMood;
     }
 
     public void setViewingMood(Integer viewingMood) {

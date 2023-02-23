@@ -1,15 +1,15 @@
 create table WISH_MOVIE
 (
-    uid VARCHAR(50) NOT NULL,
-    id_user INTEGER,
+    uid UUID NOT NULL,
+    id_user UUID,
     id_movie INTEGER,
     id_collection INTEGER,
     PRIMARY KEY (uid)
 );
 create table WISH_EPISODE
 (
-    uid VARCHAR(50) NOT NULL,
-    id_user INTEGER,
+    uid UUID NOT NULL,
+    id_user UUID,
     id_episode INTEGER,
     id_season INTEGER,
     id_tv INTEGER,
@@ -17,8 +17,8 @@ create table WISH_EPISODE
 );
 create table WATCH_MOVIE
 (
-    uid VARCHAR(50) NOT NULL,
-    id_user INTEGER,
+    uid UUID NOT NULL,
+    id_user UUID,
     id_movie INTEGER,
     id_collection INTEGER,
     viewing_place VARCHAR(50),
@@ -29,8 +29,8 @@ create table WATCH_MOVIE
 
 create table WATCH_EPISODE
 (
-    uid VARCHAR(50) NOT NULL,
-    id_user INTEGER,
+    uid UUID NOT NULL,
+    id_user UUID,
     id_episode INTEGER,
     id_season INTEGER,
     id_tv INTEGER,

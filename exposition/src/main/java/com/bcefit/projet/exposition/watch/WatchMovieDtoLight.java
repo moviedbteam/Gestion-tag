@@ -1,9 +1,11 @@
 package com.bcefit.projet.exposition.watch;
 
+import java.util.UUID;
+
 public class WatchMovieDtoLight {
 
 
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idMovie;
 
@@ -23,7 +25,7 @@ public class WatchMovieDtoLight {
     public WatchMovieDtoLight() {
     }
 
-    public WatchMovieDtoLight(Integer idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchMovieDtoLight(UUID idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.idUser = idUser;
         this.idMovie = idMovie;
         this.idCollection = idCollection;
@@ -32,24 +34,24 @@ public class WatchMovieDtoLight {
         this.viewingMood = viewingMood;
     }
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 
 
     public Integer getIdMovie() {
-        return idMovie;
+        return this.idMovie;
     }
 
     public void setIdMovie(Integer idMovie) {this.idMovie = idMovie;
     }
 
     public Integer getIdCollection() {
-        return idCollection;
+        return this.idCollection;
     }
 
     public void setIdCollection(Integer idCollection) {
@@ -57,7 +59,7 @@ public class WatchMovieDtoLight {
     }
 
     public String getViewingPlace() {
-        return viewingPlace;
+        return this.viewingPlace;
     }
 
     public void setViewingPlace(String viewingPlace) {
@@ -65,7 +67,7 @@ public class WatchMovieDtoLight {
     }
 
     public Integer getViewingRate() {
-        return viewingRate;
+        return this.viewingRate;
     }
 
     public void setViewingRate(Integer viewingRate) {
@@ -73,7 +75,7 @@ public class WatchMovieDtoLight {
     }
 
     public Integer getViewingMood() {
-        return viewingMood;
+        return this.viewingMood;
     }
 
     public void setViewingMood(Integer viewingMood) {

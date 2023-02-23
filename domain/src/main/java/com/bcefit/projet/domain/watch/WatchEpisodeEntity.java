@@ -1,5 +1,7 @@
 package com.bcefit.projet.domain.watch;
 
+import java.util.UUID;
+
 public class WatchEpisodeEntity extends WatchContentEntity{
 
     private Integer idEpisode;
@@ -17,14 +19,14 @@ public class WatchEpisodeEntity extends WatchContentEntity{
         this.idTv = idTv;
     }
 
-    public WatchEpisodeEntity(String uid, Integer idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WatchEpisodeEntity(UUID uid, UUID idUser, String viewingPlace, Integer viewingRate, Integer viewingMood, Integer idEpisode, Integer idSeason, Integer idTv) {
         super(uid, idUser, viewingPlace, viewingRate, viewingMood);
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
         this.idTv = idTv;
     }
 
-    public WatchEpisodeEntity(String uuid, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WatchEpisodeEntity(UUID uuid, Integer idEpisode, Integer idSeason, Integer idTv) {
         super(uuid);
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;

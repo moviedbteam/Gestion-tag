@@ -1,8 +1,10 @@
 package com.bcefit.projet.exposition.watch;
 
+import java.util.UUID;
+
 public class WatchEpisodeDtoLight {
 
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idEpisode;
 
@@ -23,7 +25,7 @@ public class WatchEpisodeDtoLight {
     public WatchEpisodeDtoLight() {
     }
 
-    public WatchEpisodeDtoLight(Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchEpisodeDtoLight(UUID idUser, Integer idEpisode, Integer idSeason, Integer idTv, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.idUser = idUser;
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
@@ -33,16 +35,16 @@ public class WatchEpisodeDtoLight {
         this.viewingMood = viewingMood;
     }
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 
     public Integer getIdEpisode() {
-        return idEpisode;
+        return this.idEpisode;
     }
 
     public void setIdEpisode(Integer idEpisode) {
@@ -50,7 +52,7 @@ public class WatchEpisodeDtoLight {
     }
 
     public Integer getIdSeason() {
-        return idSeason;
+        return this.idSeason;
     }
 
     public void setIdSeason(Integer idSeason) {
@@ -58,7 +60,7 @@ public class WatchEpisodeDtoLight {
     }
 
     public Integer getIdTv() {
-        return idTv;
+        return this.idTv;
     }
 
     public void setIdTv(Integer idTv) {
@@ -66,7 +68,7 @@ public class WatchEpisodeDtoLight {
     }
 
     public String getViewingPlace() {
-        return viewingPlace;
+        return this.viewingPlace;
     }
 
     public void setViewingPlace(String viewingPlace) {
@@ -74,7 +76,7 @@ public class WatchEpisodeDtoLight {
     }
 
     public Integer getViewingRate() {
-        return viewingRate;
+        return this.viewingRate;
     }
 
     public void setViewingRate(Integer viewingRate) {
@@ -82,7 +84,7 @@ public class WatchEpisodeDtoLight {
     }
 
     public Integer getViewingMood() {
-        return viewingMood;
+        return this.viewingMood;
     }
 
     public void setViewingMood(Integer viewingMood) {

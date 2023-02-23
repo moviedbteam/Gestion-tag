@@ -1,5 +1,7 @@
 package com.bcefit.projet.domain.wish;
 
+import java.util.UUID;
+
 public class WishEpisodeEntity extends WishContentEntity{
 
 
@@ -13,7 +15,7 @@ public class WishEpisodeEntity extends WishContentEntity{
         super();
     }
 
-    public WishEpisodeEntity(String uid, Integer idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
+    public WishEpisodeEntity(UUID uid, UUID idUser, Integer idEpisode, Integer idSeason, Integer idTv) {
         super(uid,idUser);
         this.idEpisode = idEpisode;
         this.idSeason = idSeason;
@@ -21,7 +23,7 @@ public class WishEpisodeEntity extends WishContentEntity{
     }
 
     public Integer getIdEpisode() {
-        return idEpisode;
+        return this.idEpisode;
     }
 
     public void setIdEpisode(Integer idEpisode) {
@@ -29,7 +31,7 @@ public class WishEpisodeEntity extends WishContentEntity{
     }
 
     public Integer getIdTv() {
-        return idTv;
+        return this.idTv;
     }
 
     public void setIdTv(Integer idTv) {
@@ -37,7 +39,7 @@ public class WishEpisodeEntity extends WishContentEntity{
     }
 
     public Integer getIdSeason() {
-        return idSeason;
+        return this.idSeason;
     }
 
     public void setIdSeason(Integer idSeason) {

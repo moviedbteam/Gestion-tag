@@ -1,5 +1,7 @@
 package com.bcefit.projet.domain.wish;
 
+import java.util.UUID;
+
 public class WishMovieEntity extends WishContentEntity {
 
 
@@ -10,14 +12,14 @@ public class WishMovieEntity extends WishContentEntity {
     public WishMovieEntity() {
     }
 
-    public WishMovieEntity(String uid, Integer idUser, Integer idMovie, Integer idCollection) {
+    public WishMovieEntity(UUID uid, UUID idUser, Integer idMovie, Integer idCollection) {
         super(uid,idUser);
         this.idMovie = idMovie;
         this.idCollection = idCollection;
     }
 
     public Integer getIdMovie() {
-        return idMovie;
+        return this.idMovie;
     }
 
     public void setIdMovie(Integer idMovie) {
@@ -25,7 +27,7 @@ public class WishMovieEntity extends WishContentEntity {
     }
 
     public Integer getIdCollection() {
-        return idCollection;
+        return this.idCollection;
     }
 
     public void setIdCollection(Integer idCollection) {

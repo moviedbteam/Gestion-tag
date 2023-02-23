@@ -1,12 +1,13 @@
 package com.bcefit.projet.exposition.watch;
 
 
+import java.util.UUID;
 
 public class WatchMovieDto {
 
-    private String uid;
+    private UUID uid;
 
-    private Integer idUser;
+    private UUID idUser;
 
     private Integer idMovie;
 
@@ -27,7 +28,7 @@ public class WatchMovieDto {
     public WatchMovieDto() {
     }
 
-    public WatchMovieDto(String uid, Integer idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
+    public WatchMovieDto(UUID uid, UUID idUser, Integer idMovie, Integer idCollection, String viewingPlace, Integer viewingRate, Integer viewingMood) {
         this.uid = uid;
         this.idUser = idUser;
         this.idMovie = idMovie;
@@ -37,19 +38,19 @@ public class WatchMovieDto {
         this.viewingMood = viewingMood;
     }
 
-    public String getUid() {
-        return uid;
+    public UUID getUid() {
+        return this.uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(UUID uid) {
         this.uid = uid;
     }
 
-    public Integer getIdUser() {
-        return idUser;
+    public UUID getIdUser() {
+        return this.idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(UUID idUser) {
         this.idUser = idUser;
     }
 

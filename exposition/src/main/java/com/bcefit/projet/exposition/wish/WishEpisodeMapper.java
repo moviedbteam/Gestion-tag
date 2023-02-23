@@ -5,6 +5,7 @@ import com.bcefit.projet.domain.wish.WishEpisodeEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class WishEpisodeMapper {
     public static WishEpisodeDto mapToDto(WishEpisodeEntity entity){
@@ -28,7 +29,7 @@ public class WishEpisodeMapper {
     }
 
 
-    public static WishEpisodeEntity mapToEntity(String uid){
+    public static WishEpisodeEntity mapToEntity(UUID uid){
         WishEpisodeEntity entity = new WishEpisodeEntity();
         entity.setUid(uid);
         return entity;

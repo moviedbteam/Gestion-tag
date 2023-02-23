@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
@@ -44,7 +45,7 @@ public class WatchEpisodeController {
     }
 
     @DeleteMapping(value ="/watch/episode/{uid}")
-    public ResponseEntity<String> deleteWatchEpisode(@PathVariable String uid)  {
+    public ResponseEntity<String> deleteWatchEpisode(@PathVariable UUID uid)  {
 
         WatchEpisodeEntity watchEpisodeEntity = WatchEpisodeMapper.mapToEntity(uid);
         watchEpisodeApplicationServicePort.deleteWatchEpisode(watchEpisodeEntity);

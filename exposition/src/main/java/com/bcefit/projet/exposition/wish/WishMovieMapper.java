@@ -5,6 +5,7 @@ import com.bcefit.projet.domain.wish.WishMovieEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class WishMovieMapper {
@@ -28,7 +29,7 @@ public class WishMovieMapper {
     }
 
 
-    public static WishMovieEntity mapToEntity(String uid){
+    public static WishMovieEntity mapToEntity(UUID uid){
         WishMovieEntity entity = new WishMovieEntity();
         entity.setUid(uid);
         return entity;
